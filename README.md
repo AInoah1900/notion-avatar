@@ -102,3 +102,35 @@ yarn start
 - 如果在安装依赖时遇到问题，可以尝试清除缓存：`yarn cache clean`
 - 如果遇到端口冲突，可以在运行开发服务器时指定端口：`yarn dev -p 3001`
 - 项目使用 Next.js 框架，大部分问题可以参考 [Next.js 官方文档](https://nextjs.org/docs)
+
+### Git提交规范
+
+本项目使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范进行Git提交。在提交代码前，请确保您的提交信息符合以下格式：
+
+```
+<type>(<scope>): <subject>
+```
+
+其中：
+- `type`: 表示提交类型，常见的类型包括：
+  - `feat`: 新功能
+  - `fix`: 修复bug
+  - `docs`: 文档更新
+  - `style`: 代码风格变更，不影响代码功能
+  - `refactor`: 代码重构，既不修复bug也不添加新功能
+  - `perf`: 性能优化
+  - `test`: 添加或修改测试代码
+  - `chore`: 构建过程或辅助工具的变动
+- `scope`: (可选) 表示影响范围
+- `subject`: 提交的简短描述
+
+**提交示例：**
+- `git commit -m "feat: 添加新的头像类型"`
+- `git commit -m "fix: 修复SVG渲染问题"`
+- `git commit -m "docs: 更新README文档"`
+
+您也可以使用项目配置的辅助工具进行规范化提交：
+```bash
+yarn commit
+```
+这将启动交互式提交向导，帮助您创建符合规范的提交信息。
